@@ -58,7 +58,14 @@ jobs:
       - name: 安装 Wrangler
         run: pnpm add -g wrangler@3 # 安装 Wrangler v3
 
-      # 第六步：发布到 Github Pages
+      # 第六步：打包为 Github Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/.vitepress/dist # 构建输出目录
+          name: github-pages
+
+      # 第七步：发布到 Github Pages
       - name: 发布到 Github Pages
         id: deployment
         uses: actions/deploy-pages@v4
