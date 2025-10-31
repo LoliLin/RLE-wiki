@@ -1,4 +1,4 @@
-name: 部署到 Cloudflare Pages
+name: 部署到 Github Pages
 
 on:
   push:
@@ -10,6 +10,12 @@ on:
       - 'package.json'
       - 'packages/**'
   workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
