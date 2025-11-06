@@ -57,6 +57,7 @@ const baseConfig = {
   excludeFilesByFrontmatterFieldName: 'exclude',
   collapsed: true,
   documentRootPath: '/docs',
+  base: '/RLE-wiki/',
 } satisfies Partial<SidebarOptions>
 
 const sidebarOptions = [
